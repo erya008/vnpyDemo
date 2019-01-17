@@ -194,5 +194,5 @@ class NewMacdStrategy(CtaTemplate):
         return temp
 
     def log(self,message):
-        if False:
+        if True:
             print message

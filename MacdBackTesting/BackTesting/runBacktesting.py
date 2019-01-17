@@ -48,6 +48,7 @@ if __name__ == '__main__':
 
     # 显示回测结果
     engine.showBacktestingResult()
+    # dajiid
 
     print ts.adfuller(newMacdStrategy.NewMacdStrategy.MacdList, 1)
 
