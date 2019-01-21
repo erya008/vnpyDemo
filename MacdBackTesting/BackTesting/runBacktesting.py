@@ -28,11 +28,11 @@ if __name__ == '__main__':
 
     # 设置回测用的数据起始日期
     engine.setStartDate('20100501')
-    engine.setEndDate('20120730')
+    engine.setEndDate('20130730')
 
     # 设置产品相关参数
-    engine.setSlippage(0.0)  # 股指1跳
-    engine.setRate(0.0 / 10000)  # 万0.3
+    engine.setSlippage(0.2)  # 股指1跳
+    engine.setRate(0.23 / 10000)  # 万0.3
     engine.setSize(1)  # 股指合约大小
     engine.setPriceTick(0.2)  # 股指最小价格变动
 

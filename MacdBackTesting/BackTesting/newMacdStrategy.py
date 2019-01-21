@@ -40,7 +40,7 @@ class NewMacdStrategy(CtaTemplate):
 
     lowBand = -0.0009
     upBand = 0.0011
-    fixprice = 0.6
+    fixprice = 0.2
     ontrade = 0
     adjustNum = 2700
 
@@ -132,16 +132,16 @@ class NewMacdStrategy(CtaTemplate):
 
         self.MacdList.append(self.beforeMacd)
         # 做多买入
-        crossLowpBand = (self.beforeMacd < self.lowBand) and (self.newMacd > self.lowBand)
+        crossLowpBand = (self.diff > 0.0) and (self.dea9 > 0.0) and(self.beforeMacd < self.lowBand) and (self.newMacd > self.lowBand)
 
         # 做多止损
-        crossLimitLowBand = self.newMacd <= 1.2 * self.lowBand
+        crossLimitLowBand = self.newMacd <= 1.1 * self.lowBand
 
         # 做空买入
-        crossUpBand = (self.beforeMacd > self.upBand) and (self.newMacd < self.upBand)
+        crossUpBand = (self.diff < 0.0) and (self.dea9 < 0.0) and (self.beforeMacd > self.upBand) and (self.newMacd < self.upBand)
 
         # 做空止损
-        crossLimitUpBand = self.newMacd >= 1.2 * self.upBand
+        crossLimitUpBand = self.newMacd >= 1.1 * self.upBand
 
         if bar.datetime.time() < datetime.time(14, 55):
             if self.pos == 0:
