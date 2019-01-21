@@ -11,9 +11,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MacdBackTesting$ctaBacktesting.coverage" NAME="ctaBacktesting Coverage Results" MODIFIED="1548041253651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy" />
-    <SUITE FILE_PATH="coverage/MacdBackTesting$runBacktesting.coverage" NAME="runBacktesting Coverage Results" MODIFIED="1548045885950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
-    <SUITE FILE_PATH="coverage/MacdBackTesting$newMacdStrategy.coverage" NAME="newMacdStrategy Coverage Results" MODIFIED="1548043898129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$vtUtility.coverage" NAME="vtUtility Coverage Results" MODIFIED="1548054135959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$ctaBacktesting.coverage" NAME="ctaBacktesting Coverage Results" MODIFIED="1548058422785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$runBacktesting.coverage" NAME="runBacktesting Coverage Results" MODIFIED="1548072221363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$newMacdStrategy.coverage" NAME="newMacdStrategy Coverage Results" MODIFIED="1548060261708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$ctaHistoryData.coverage" NAME="ctaHistoryData Coverage Results" MODIFIED="1548070072013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$loadCsv.coverage" NAME="loadCsv Coverage Results" MODIFIED="1548072273341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
+    <SUITE FILE_PATH="coverage/MacdBackTesting$cutData.coverage" NAME="cutData Coverage Results" MODIFIED="1548071270319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackTesting" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="MacdBackTesting" />
@@ -23,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackTesting/newMacdStrategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="139" column="14" lean-forward="true" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
+            <state relative-caret-position="-1711">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="23" />
               <folding>
                 <element signature="e#316#379#0" expanded="true" />
               </folding>
@@ -35,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackTesting/runBacktesting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="134">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <element signature="e#327#358#0" expanded="true" />
               </folding>
@@ -45,33 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py">
+        <entry file="file://$PROJECT_DIR$/BackTesting/log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1827">
-              <caret line="328" selection-start-line="328" selection-end-line="328" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/qtpy/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="210" selection-start-line="210" selection-end-line="210" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirt/tickData.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackTesting/VnpyTickData.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="402870">
-              <caret line="26858" column="47" lean-forward="true" selection-start-line="26858" selection-start-column="47" selection-end-line="26858" selection-end-column="47" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -79,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackTesting/loadCsv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
               <folding>
                 <element signature="e#52#114#0" expanded="true" />
               </folding>
@@ -88,16 +69,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirt/tickData2013.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackTesting/tick_data.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="122475">
+              <caret line="8165" column="46" selection-start-line="8165" selection-start-column="46" selection-end-line="8165" selection-end-column="46" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBase.py">
+        <entry file="file://$PROJECT_DIR$/BackTesting/VnpyTickData.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="402">
+              <caret line="26864" column="17" selection-start-line="26864" selection-start-column="17" selection-end-line="26864" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackTesting/cutData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -105,8 +102,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaHistoryData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-750">
-              <caret line="82" column="38" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="38" />
+            <state relative-caret-position="120">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackTesting/IF0000_1min.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="1108">
+              <caret line="6586" column="45" selection-start-line="6586" selection-start-column="41" selection-end-line="6586" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -137,9 +152,13 @@
         <option value="$USER_HOME$/MacdBackTesting/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py" />
         <option value="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/vnpy-1.8.0-py2.7.egg/vnpy/trader/app/ctaStrategy/ctaBacktesting.py" />
+        <option value="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/vtUtility.py" />
         <option value="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py" />
         <option value="$PROJECT_DIR$/BackTesting/newMacdStrategy.py" />
+        <option value="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaHistoryData.py" />
+        <option value="$PROJECT_DIR$/BackTesting/loadCsv.py" />
         <option value="$PROJECT_DIR$/BackTesting/runBacktesting.py" />
+        <option value="$PROJECT_DIR$/BackTesting/cutData.py" />
       </list>
     </option>
   </component>
@@ -181,6 +200,23 @@
               <item name="MacdBackTesting" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="MacdBackTesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 2.7 (MacdBackTesting) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="MacdBackTesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 2.7 (MacdBackTesting) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python-skeletons" type="51189727:PyUserSkeletonsNode" />
+            </path>
+            <path>
+              <item name="MacdBackTesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 2.7 (MacdBackTesting) (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python2.7" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -212,8 +248,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runBacktesting">
-    <configuration name="ctaBacktesting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.loadCsv">
+    <configuration name="ctaHistoryData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MacdBackTesting" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -226,7 +262,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaHistoryData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cutData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MacdBackTesting" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BackTesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BackTesting/cutData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loadCsv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MacdBackTesting" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BackTesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BackTesting/loadCsv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,9 +361,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.loadCsv" />
         <item itemvalue="Python.runBacktesting" />
+        <item itemvalue="Python.cutData" />
+        <item itemvalue="Python.ctaHistoryData" />
         <item itemvalue="Python.newMacdStrategy" />
-        <item itemvalue="Python.ctaBacktesting" />
       </list>
     </recent_temporary>
   </component>
@@ -309,12 +391,12 @@
       <workItem from="1547800295740" duration="9832000" />
       <workItem from="1548036014670" duration="1056000" />
       <workItem from="1548038597157" duration="21000" />
-      <workItem from="1548038715953" duration="6861000" />
+      <workItem from="1548038715953" duration="24386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44731000" />
+    <option name="totallyTimeSpent" value="62256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,8 +415,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5009488" side_tool="true" weight="0.24959612" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.3739726" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49676898" weight="0.3849315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,7 +430,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32552505" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.15831988" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -359,46 +441,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py</url>
-          <line>273</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/BackTesting/runBacktesting.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BackTesting/runBacktesting.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BackTesting/newMacdStrategy.py</url>
+          <line>108</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirt/requirt" />
-    <entry file="file://$PROJECT_DIR$/.python-version">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/MacdBackTesting/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MacdBackTesting/lib/python2.7/site-packages/vnpy/trader/vtObject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="1645" column="4" selection-start-line="1645" selection-start-column="4" selection-end-line="1645" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-1597007679/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="442" column="4" selection-start-line="442" selection-start-column="4" selection-end-line="442" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MacdBackTesting/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaTemplate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -439,36 +499,74 @@
     <entry file="file://$PROJECT_DIR$/DataCheck/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/vtUtility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="314" selection-start-line="314" selection-end-line="314" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/_strptime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4815">
-          <caret line="327" selection-start-line="327" selection-end-line="327" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirt/.python-version">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackTesting/.python-version">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackTesting/tickData2013.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/locale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="558" selection-start-line="558" selection-end-line="558" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirt/tickData.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-338996" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirt/tickData2013.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirt/requirt.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/uri_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/strategy/strategyKingKeltner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="66" column="60" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaTemplate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="1188" selection-start-line="1188" selection-end-line="1188" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/collections.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -477,16 +575,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/vtUtility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="142" column="33" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="1082" selection-start-line="1082" selection-end-line="1082" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BackTesting/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackTesting/.python-version">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaTemplate.py">
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/mongo_client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
-          <caret line="150" column="40" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
+        <state relative-caret-position="132">
+          <caret line="1247" selection-start-line="1247" selection-end-line="1247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/801092798/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="797" column="4" selection-start-line="797" selection-start-column="4" selection-end-line="797" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/_abcoll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/bson/objectid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3791">
+          <caret line="3144" column="8" selection-start-line="3144" selection-start-column="8" selection-end-line="3144" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/vtObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="203" column="43" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/_strptime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="327" selection-start-line="327" selection-end-line="327" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/qtpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackTesting/2013_tick_data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -497,107 +711,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirt/requirt.sh">
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaHistoryData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/vtObject.py">
+    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="159">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/pymongo/cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17400">
-          <caret line="1186" selection-start-line="1186" selection-end-line="1186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackTesting/tickData2013.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BackTesting/IF0000_1min.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="1108">
           <caret line="6586" column="45" selection-start-line="6586" selection-start-column="41" selection-end-line="6586" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaHistoryData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-750">
-          <caret line="82" column="38" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBacktesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1827">
-          <caret line="328" selection-start-line="328" selection-end-line="328" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/qtpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackTesting/runBacktesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-          <folding>
-            <element signature="e#327#358#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BackTesting/newMacdStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="139" column="14" lean-forward="true" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
+        <state relative-caret-position="-1711">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="23" />
           <folding>
             <element signature="e#316#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackTesting/VnpyTickData.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="402870">
-          <caret line="26858" column="47" lean-forward="true" selection-start-line="26858" selection-start-column="47" selection-end-line="26858" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda2-4.0.0/lib/python2.7/site-packages/vnpy/trader/app/ctaStrategy/ctaBase.py">
+    <entry file="file://$PROJECT_DIR$/BackTesting/runBacktesting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="134">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#327#358#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BackTesting/loadCsv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding>
             <element signature="e#52#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirt/tickData2013.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
+    <entry file="file://$PROJECT_DIR$/BackTesting/VnpyTickData.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="402">
+          <caret line="26864" column="17" selection-start-line="26864" selection-start-column="17" selection-end-line="26864" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirt/tickData.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
+    <entry file="file://$PROJECT_DIR$/BackTesting/cutData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackTesting/tick_data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="122475">
+          <caret line="8165" column="46" selection-start-line="8165" selection-start-column="46" selection-end-line="8165" selection-end-column="46" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

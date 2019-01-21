@@ -24,7 +24,7 @@ class NewMacdStrategy(CtaTemplate):
     author = u'liu_hao'
 
     # 策略参数
-    initDays = 10  # 初始化数据所用的天数
+    initDays = 0  # 初始化数据所用的天数
     barIndex = 0
     MacdList = []
     barDataList = []
@@ -42,7 +42,7 @@ class NewMacdStrategy(CtaTemplate):
     upBand = 0.0011
     fixprice = 0.2
     ontrade = 0
-    adjustNum = 2700
+    adjustNum = 5000
 
     # 参数列表，保存了参数的名称
     paramList = ['name',
@@ -76,7 +76,7 @@ class NewMacdStrategy(CtaTemplate):
         """Constructor"""
         super(NewMacdStrategy, self).__init__(ctaEngine, setting)
 
-        self.bg = BarGenerator(self.onBar)
+        self.bg = BarGenerator(self.onBar, nTick=10, onNTickBar=self.onNTickBar)
         self.am = ArrayManager()
 
         # 注意策略类中的可变对象属性（通常是list和dict等），在策略初始化时需要重新创建，
@@ -88,7 +88,7 @@ class NewMacdStrategy(CtaTemplate):
     def onInit(self):
         """初始化策略（必须由用户继承实现）"""
         self.writeCtaLog(u'new MACD演示策略初始化')
-        initData = self.loadBar(self.initDays)
+        initData = self.loadTick(self.initDays)
         for bar in initData:
             self.onBar(bar)
         self.putEvent()
@@ -106,7 +106,85 @@ class NewMacdStrategy(CtaTemplate):
 
     def onTick(self, tick):
         """收到行情TICK推送（必须由用户继承实现）"""
-        self.bg.updateTick(tick)
+        self.bg.upDateTickBar(tick)
+        # self.bg.updateBar(tick)
+
+    def onNTickBar(self, bar):
+        am = self.am
+        am.updateBar(bar)
+        if not am.inited:
+            return
+        if self.barIndex == 0:
+            self.ema12 = bar.close
+            self.ema26 = bar.close
+            self.diff = 0
+            self.dea9 = 0
+        else:
+            self.ema12 = self.ema(self.ema12, bar.close, 12)
+            self.ema26 = self.ema(self.ema26, bar.close, 26)
+            self.diff = self.ema12 - self.ema26
+            self.dea9 = self.ema(self.dea9, self.diff, 9)
+        self.macd = self.diff - self.dea9
+        if self.barIndex < 34:
+            self.newMacd = 0
+        else:
+            self.newMacd = self.macd / am.closeArray[-35]
+
+        self.MacdList.append(self.beforeMacd)
+        # 做多买入
+        crossLowpBand = (self.diff > 0.0) and (self.dea9 > 0.0) and (self.beforeMacd < self.lowBand) and (
+                    self.newMacd > self.lowBand)
+
+        # 做多止损
+        crossLimitLowBand = self.newMacd <= 1.1 * self.lowBand
+
+        # 做空买入
+        crossUpBand = (self.diff < 0.0) and (self.dea9 < 0.0) and (self.beforeMacd > self.upBand) and (
+                    self.newMacd < self.upBand)
+
+        # 做空止损
+        crossLimitUpBand = self.newMacd >= 1.1 * self.upBand
+
+        if bar.datetime.time() < datetime.time(14, 55):
+            if self.pos == 0:
+                if crossLowpBand:
+                    self.buy(bar.close + self.fixprice, 1)
+                    self.log('buy   : ' + str(bar.datetime) + " " + str(bar.close))
+                elif crossUpBand:
+                    self.short(bar.close - self.fixprice, 1)
+                    self.log('short : ' + str(bar.datetime) + " " + str(bar.close))
+
+            elif self.pos > 0:
+                if self.newMacd >= 0:
+                    self.log('sell  : ' + str(bar.datetime) + " " + str(bar.close) + "  +")
+                    self.sell(bar.close - self.fixprice, 1)
+                elif crossLimitLowBand:
+                    self.sell(bar.close - self.fixprice, 1)
+                    self.log('sell  : ' + str(bar.datetime) + " " + str(bar.close) + "  -")
+            else:
+                if self.newMacd <= 0:
+                    self.log('cover : ' + str(bar.datetime) + " " + str(bar.close) + "  +")
+                    self.cover(bar.close + self.fixprice, 1)
+
+                elif crossLimitUpBand:
+                    self.log('cover : ' + str(bar.datetime) + " " + str(bar.close) + "  -")
+                    self.cover(bar.close + self.fixprice, 1)
+        else:
+            if self.pos > 0:
+                self.log('sell  : ' + str(bar.datetime) + " " + str(bar.close))
+                self.sell(bar.close - self.fixprice, 1)
+
+            elif self.pos < 0:
+                self.log('cover : ' + str(bar.datetime) + " " + str(bar.close))
+                self.cover(bar.close + self.fixprice, 1)
+
+        if self.barIndex < 35:
+            self.barIndex = self.barIndex + 1
+        self.beforeMacd = self.newMacd
+        self.adjustParameter()
+
+        # 发出状态更新事件
+        self.putEvent()
 
     def onBar(self, bar):
         """收到Bar推送（必须由用户继承实现）"""
@@ -206,8 +284,8 @@ class NewMacdStrategy(CtaTemplate):
             return
         else:
             tempList = self.MacdList[(-1*self.adjustNum):]
-            max_10_list = heapq.nlargest(500, tempList)
-            min_10_list = heapq.nsmallest(500, tempList)
+            max_10_list = heapq.nlargest(1000, tempList)
+            min_10_list = heapq.nsmallest(1000, tempList)
             self.upBand = sum(max_10_list)/len(max_10_list)
             self.lowBand = sum(min_10_list)/len(min_10_list)
             # self.log(self.lowBand)

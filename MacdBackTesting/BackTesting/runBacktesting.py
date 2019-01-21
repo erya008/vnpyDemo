@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import newMacdStrategy
 import statsmodels.tsa.stattools as ts
 from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, MINUTE_DB_NAME
-
+from vnpy.trader.app.ctaStrategy.strategy.strategyKingKeltner import KkStrategy
 if __name__ == '__main__':
 
 
@@ -24,11 +24,11 @@ if __name__ == '__main__':
     engine = BacktestingEngine()
 
     # 设置引擎的回测模式为K线
-    engine.setBacktestingMode(engine.BAR_MODE)
+    engine.setBacktestingMode(engine.TICK_BAR_MODE)
 
     # 设置回测用的数据起始日期
-    engine.setStartDate('20100501')
-    engine.setEndDate('20130730')
+    engine.setStartDate('20130104', initDays=0)
+    # engine.setEndDate('20130111')
 
     # 设置产品相关参数
     engine.setSlippage(0.2)  # 股指1跳
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     engine.setPriceTick(0.2)  # 股指最小价格变动
 
     # 设置使用的历史数据库
-    engine.setDatabase(MINUTE_DB_NAME, 'IF0000')
+    engine.setDatabase(MINUTE_DB_NAME, 'tick_data')
 
     # 在引擎中创建策略对象
     d = {}
