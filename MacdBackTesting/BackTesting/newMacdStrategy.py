@@ -15,6 +15,7 @@ from vnpy.trader.language.english.constant import EMPTY_FLOAT
 from vnpy.trader.vtUtility import BarGenerator, ArrayManager
 import datetime
 import pandas as pd
+import heapq
 
 
 class NewMacdStrategy(CtaTemplate):
@@ -23,7 +24,7 @@ class NewMacdStrategy(CtaTemplate):
     author = u'liu_hao'
 
     # 策略参数
-    initDays = 1  # 初始化数据所用的天数
+    initDays = 10  # 初始化数据所用的天数
     barIndex = 0
     MacdList = []
     barDataList = []
@@ -39,8 +40,9 @@ class NewMacdStrategy(CtaTemplate):
 
     lowBand = -0.0009
     upBand = 0.0011
-    fixprice = 5
+    fixprice = 0.6
     ontrade = 0
+    adjustNum = 2700
 
     # 参数列表，保存了参数的名称
     paramList = ['name',
@@ -62,7 +64,8 @@ class NewMacdStrategy(CtaTemplate):
     # 变量列表，保存了变量的名称
     varList = ['lowBand',
                'upBand',
-               'fixprice']
+               'fixprice',
+               'adjustNum']
 
     # 同步列表，保存了需要保存到数据库的变量名称
     syncList = ['pos']
@@ -151,18 +154,18 @@ class NewMacdStrategy(CtaTemplate):
 
             elif self.pos > 0:
                 if self.newMacd >= 0:
-                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close))
+                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close)+"  +")
                     self.sell(bar.close-self.fixprice, 1)
                 elif crossLimitLowBand:
                     self.sell(bar.close-self.fixprice, 1)
-                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close))
+                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close)+"  -")
             else:
                 if self.newMacd <= 0:
-                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close))
+                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close)+"  +")
                     self.cover(bar.close+self.fixprice, 1)
             
                 elif crossLimitUpBand:
-                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close))
+                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close)+"  -")
                     self.cover(bar.close+self.fixprice, 1)
         else:
             if self.pos > 0:
@@ -176,6 +179,7 @@ class NewMacdStrategy(CtaTemplate):
         if self.barIndex < 35:
             self.barIndex = self.barIndex + 1
         self.beforeMacd = self.newMacd
+        self.adjustParameter()
 
         # 发出状态更新事件
         self.putEvent()
@@ -196,3 +200,16 @@ class NewMacdStrategy(CtaTemplate):
     def log(self,message):
         if True:
             print message
+
+    def adjustParameter(self):
+        if len(self.MacdList) < self.adjustNum:
+            return
+        else:
+            tempList = self.MacdList[(-1*self.adjustNum):]
+            max_10_list = heapq.nlargest(500, tempList)
+            min_10_list = heapq.nsmallest(500, tempList)
+            self.upBand = sum(max_10_list)/len(max_10_list)
+            self.lowBand = sum(min_10_list)/len(min_10_list)
+            # self.log(self.lowBand)
+            # self.log(self.upBand)
+
