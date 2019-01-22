@@ -12,6 +12,7 @@ import pandas as pd
 
 
 data = pd.read_csv("VnpyTickData.csv")
-my_data = data[1:200000]
+print data.shape
+my_data = data[1:2000000]
 my_data.to_csv("tick_data.csv", index=False)
 

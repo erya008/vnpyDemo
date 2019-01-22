@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # 设置回测用的数据起始日期
     engine.setStartDate('20130104', initDays=0)
-    # engine.setEndDate('20130111')
+    engine.setEndDate('20130111')
 
     # 设置产品相关参数
     engine.setSlippage(0.2)  # 股指1跳

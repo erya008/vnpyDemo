@@ -42,7 +42,7 @@ class NewMacdStrategy(CtaTemplate):
     upBand = 0.0011
     fixprice = 0.2
     ontrade = 0
-    adjustNum = 5000
+    adjustNum = 2500
 
     # 参数列表，保存了参数的名称
     paramList = ['name',
@@ -284,8 +284,8 @@ class NewMacdStrategy(CtaTemplate):
             return
         else:
             tempList = self.MacdList[(-1*self.adjustNum):]
-            max_10_list = heapq.nlargest(1000, tempList)
-            min_10_list = heapq.nsmallest(1000, tempList)
+            max_10_list = heapq.nlargest(500, tempList)
+            min_10_list = heapq.nsmallest(500, tempList)
             self.upBand = sum(max_10_list)/len(max_10_list)
             self.lowBand = sum(min_10_list)/len(min_10_list)
             # self.log(self.lowBand)
