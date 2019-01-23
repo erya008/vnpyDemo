@@ -14,12 +14,12 @@
 from __future__ import division
 import matplotlib.pyplot as plt
 import newMacdStrategy
+import pandas as pd
 import statsmodels.tsa.stattools as ts
 from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, MINUTE_DB_NAME
 from vnpy.trader.app.ctaStrategy.strategy.strategyKingKeltner import KkStrategy
+
 if __name__ == '__main__':
-
-
     # 创建回测引擎
     engine = BacktestingEngine()
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # 设置回测用的数据起始日期
     engine.setStartDate('20130104', initDays=0)
-    engine.setEndDate('20130105')
+    # engine.setEndDate('2013012')
 
     # 设置产品相关参数
     engine.setSlippage(0.2)  # 股指1跳
@@ -47,12 +47,13 @@ if __name__ == '__main__':
     engine.runBacktesting()
 
     # 显示回测结果
-    # engine.showBacktestingResult()
+    engine.showBacktestingResult()
     # dajiid
 
     print ts.adfuller(newMacdStrategy.NewMacdStrategy.oldMacdList, 1)
     print ts.adfuller(newMacdStrategy.NewMacdStrategy.MacdList, 1)
+    # pd.DataFrame(data=newMacdStrategy.NewMacdStrategy.oldMacdList).dropna().to_csv("macd1.csv")
 
-    plt.figure(1)
-    plt.plot(newMacdStrategy.NewMacdStrategy.oldMacdList)
-    plt.show()
+    # plt.figure(1)
+    # plt.plot(newMacdStrategy.NewMacdStrategy.oldMacdList)
+    # plt.show()

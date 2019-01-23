@@ -43,7 +43,7 @@ class NewMacdStrategy(CtaTemplate):
     upBand = 0.0011
     fixprice = 0.2
     ontrade = 0
-    adjustNum = 2500
+    adjustNum = 5000
 
     # 参数列表，保存了参数的名称
     paramList = ['name',
@@ -114,8 +114,8 @@ class NewMacdStrategy(CtaTemplate):
     def onNTickBar(self, bar):
         am = self.am
         am.updateBar(bar)
-        if not am.inited:
-            return
+        # if not am.inited:
+        #     return
         if self.barIndex == 0:
             self.ema12 = bar.close
             self.ema26 = bar.close
@@ -214,8 +214,8 @@ class NewMacdStrategy(CtaTemplate):
             return
         else:
             tempList = self.MacdList[(-1*self.adjustNum):]
-            max_10_list = heapq.nlargest(500, tempList)
-            min_10_list = heapq.nsmallest(500, tempList)
+            max_10_list = heapq.nlargest(200, tempList)
+            min_10_list = heapq.nsmallest(200, tempList)
             self.upBand = sum(max_10_list)/len(max_10_list)
             self.lowBand = sum(min_10_list)/len(min_10_list)
             # self.log(self.lowBand)

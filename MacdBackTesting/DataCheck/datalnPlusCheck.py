@@ -23,6 +23,7 @@ for index in addMap:
 csv_data['ln'] = np.log(csv_data['Close'])
 data = csv_data['ln']
 print(data.head(10))
+
 diff_data = data.diff().dropna()
 diff_data1s = data.diff(periods=2).dropna()
 diff_data5s = data.diff(periods=10).dropna()
