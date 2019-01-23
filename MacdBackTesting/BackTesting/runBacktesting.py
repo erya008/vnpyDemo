@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # 设置回测用的数据起始日期
     engine.setStartDate('20130104', initDays=0)
-    engine.setEndDate('20130111')
+    engine.setEndDate('20130105')
 
     # 设置产品相关参数
     engine.setSlippage(0.2)  # 股指1跳
@@ -47,11 +47,12 @@ if __name__ == '__main__':
     engine.runBacktesting()
 
     # 显示回测结果
-    engine.showBacktestingResult()
+    # engine.showBacktestingResult()
     # dajiid
 
+    print ts.adfuller(newMacdStrategy.NewMacdStrategy.oldMacdList, 1)
     print ts.adfuller(newMacdStrategy.NewMacdStrategy.MacdList, 1)
 
     plt.figure(1)
-    plt.plot(newMacdStrategy.NewMacdStrategy.MacdList)
+    plt.plot(newMacdStrategy.NewMacdStrategy.oldMacdList)
     plt.show()

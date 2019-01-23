@@ -27,6 +27,7 @@ class NewMacdStrategy(CtaTemplate):
     initDays = 0  # 初始化数据所用的天数
     barIndex = 0
     MacdList = []
+    oldMacdList = []
     barDataList = []
     ema12 = EMPTY_FLOAT
     ema26 = EMPTY_FLOAT
@@ -106,6 +107,7 @@ class NewMacdStrategy(CtaTemplate):
 
     def onTick(self, tick):
         """收到行情TICK推送（必须由用户继承实现）"""
+
         self.bg.upDateTickBar(tick)
         # self.bg.updateBar(tick)
 
@@ -131,6 +133,7 @@ class NewMacdStrategy(CtaTemplate):
             self.newMacd = self.macd / am.closeArray[-35]
 
         self.MacdList.append(self.beforeMacd)
+        self.oldMacdList.append(self.macd)
         # 做多买入
         crossLowpBand = (self.diff > 0.0) and (self.dea9 > 0.0) and (self.beforeMacd < self.lowBand) and (
                     self.newMacd > self.lowBand)
@@ -187,80 +190,7 @@ class NewMacdStrategy(CtaTemplate):
         self.putEvent()
 
     def onBar(self, bar):
-        """收到Bar推送（必须由用户继承实现）"""
-        am = self.am
-        am.updateBar(bar)
-        if not am.inited:
-            return
-        if self.barIndex == 0:
-            self.ema12 = bar.close
-            self.ema26 = bar.close
-            self.diff = 0
-            self.dea9 = 0
-        else:
-            self.ema12 = self.ema(self.ema12, bar.close, 12)
-            self.ema26 = self.ema(self.ema26, bar.close, 26)
-            self.diff = self.ema12 - self.ema26
-            self.dea9 = self.ema(self.dea9, self.diff, 9)
-        self.macd = self.diff - self.dea9
-        if self.barIndex < 34:
-            self.newMacd = 0
-        else:
-            self.newMacd = self.macd / am.closeArray[-35]
-
-        self.MacdList.append(self.beforeMacd)
-        # 做多买入
-        crossLowpBand = (self.diff > 0.0) and (self.dea9 > 0.0) and(self.beforeMacd < self.lowBand) and (self.newMacd > self.lowBand)
-
-        # 做多止损
-        crossLimitLowBand = self.newMacd <= 1.1 * self.lowBand
-
-        # 做空买入
-        crossUpBand = (self.diff < 0.0) and (self.dea9 < 0.0) and (self.beforeMacd > self.upBand) and (self.newMacd < self.upBand)
-
-        # 做空止损
-        crossLimitUpBand = self.newMacd >= 1.1 * self.upBand
-
-        if bar.datetime.time() < datetime.time(14, 55):
-            if self.pos == 0:
-                if crossLowpBand:
-                    self.buy(bar.close+self.fixprice, 1)
-                    self.log('buy   : '+str(bar.datetime)+" "+str(bar.close))
-                elif crossUpBand:
-                    self.short(bar.close-self.fixprice, 1)
-                    self.log('short : '+str(bar.datetime)+" "+str(bar.close))
-
-            elif self.pos > 0:
-                if self.newMacd >= 0:
-                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close)+"  +")
-                    self.sell(bar.close-self.fixprice, 1)
-                elif crossLimitLowBand:
-                    self.sell(bar.close-self.fixprice, 1)
-                    self.log('sell  : '+str(bar.datetime)+" "+str(bar.close)+"  -")
-            else:
-                if self.newMacd <= 0:
-                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close)+"  +")
-                    self.cover(bar.close+self.fixprice, 1)
-            
-                elif crossLimitUpBand:
-                    self.log('cover : '+str(bar.datetime)+" "+str(bar.close)+"  -")
-                    self.cover(bar.close+self.fixprice, 1)
-        else:
-            if self.pos > 0:
-                self.log('sell  : '+str(bar.datetime)+" "+str(bar.close))
-                self.sell(bar.close-self.fixprice, 1)
-                
-            elif self.pos < 0:
-                self.log('cover : '+str(bar.datetime)+" "+str(bar.close))
-                self.cover(bar.close+self.fixprice, 1)
-
-        if self.barIndex < 35:
-            self.barIndex = self.barIndex + 1
-        self.beforeMacd = self.newMacd
-        self.adjustParameter()
-
-        # 发出状态更新事件
-        self.putEvent()
+        pass
 
     def onOrder(self, order):
         pass
